@@ -23,6 +23,6 @@
     "allowUnusedLabels": false,
     "allowUnreachableCode": false
   },
-  "include": ["src/**/*.ts", "src/**/*.js"],
+  "include": ["src/**/*.ts", "src/**/*.js", "declarations.d.ts"],
   "exclude": ["./plugins/**/*", "./typings/**/*", "./dist/**/*", "./test/**/*"]
 }
