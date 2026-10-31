@@ -1,7 +1,7 @@
 import News from './news/news';
 import Sources from './sources/sources';
 
-import type { IDate, IRespArticles, IRespSources, ISources } from '../model';
+import type { IRespArticles, IRespSources } from '../model';
 
 class AppView {
   private readonly news: News;
@@ -14,18 +14,11 @@ class AppView {
   }
 
   public drawNews(data?: IRespArticles): void {
-    let values: IDate[];
-    if (data) {
-      values = data.articles ? data.articles : [];
-      this.news.draw(values);
-    }
+    this.news.draw(data?.articles ?? []);
   }
 
   public drawSources(data?: IRespSources): void {
-    if (data) {
-      const values: ISources = data?.sources ? data?.sources : [];
-      this.sources.draw(values);
-    }
+    this.sources.draw(data?.sources ?? []);
   }
 }
 
