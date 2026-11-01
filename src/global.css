@@ -121,26 +121,29 @@ footer .copyright::before {
 }
 
 .rss {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: bold;
+  font-size: 21px;
+  letter-spacing: -1px;
+}
+
+.rss::before {
+  content: '';
   display: block;
-  position: relative;
-  width: 86px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   background-image: url('./assets/images/rss.svg');
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: left center;
-  margin-right: 32px;
+  background-position: center;
 }
 
 .rss-year {
-  position: absolute;
-  bottom: 0;
-  right: -26px;
-  font-size: 21px;
-  letter-spacing: -2px;
-  color: var(--text);
-  line-height: 0.9;
-  font-weight: bold;
+  line-height: 1;
 }
 
 :focus-visible {
