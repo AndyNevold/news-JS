@@ -10,7 +10,9 @@
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  font: 300 1em 'Fira Sans', sans-serif;
+  font:
+    300 1em 'Fira Sans',
+    sans-serif;
   overflow: hidden;
   width: 300px;
   position: relative;
@@ -56,23 +58,38 @@
 .menu__slide-arrow {
   width: 50px;
   height: 50px;
-  border: 2px solid #8a7465;
+  border: 2px solid var(--border, #2a2f3a);
+  background: var(--bg-elevated, #1b1e27);
   box-sizing: border-box;
   border-radius: 50%;
-  outline: none !important;
+  outline: none;
   font-size: 38px;
   font-weight: 400;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    transform 0.1s;
 }
-.menu__slide-arrow:hover {
+
+.menu__slide-arrow img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.menu__slide-arrow:hover,
+.menu__slide-arrow:focus-visible {
   cursor: pointer;
-  background: #8a7465;
+  background: var(--accent, #30c5ff);
+  border-color: var(--accent, #30c5ff);
 }
 
 .menu__slide-arrow:active {
-  transform: scale(0.9);
+  transform: scale(0.92);
 }
 
 .menu__arrow-left {
